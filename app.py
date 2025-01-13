@@ -16,11 +16,11 @@ from sklearn.metrics.pairwise import cosine_similarity
 nltk_data_dir = os.path.join(os.getcwd(), 'nltk_data')
 os.makedirs(nltk_data_dir, exist_ok=True)
 nltk.data.path.append(nltk_data_dir)
-#nltk.download('stopwords', download_dir=nltk_data_dir, quiet=True)
-#nltk.download('wordnet', download_dir=nltk_data_dir, quiet=True)
-#nltk.download('punkt', download_dir=nltk_data_dir, quiet=True)
+nltk.download('stopwords', download_dir=nltk_data_dir, quiet=True)
+nltk.download('wordnet', download_dir=nltk_data_dir, quiet=True)
+nltk.download('punkt', download_dir=nltk_data_dir, quiet=True)
 # Remove or comment out the line below
-# nltk.download('punkt_tab', download_dir=nltk_data_dir, quiet=True)
+nltk.download('punkt_tab', download_dir=nltk_data_dir, quiet=True)
 
 model = SentenceTransformer('all-mpnet-base-v2')
 
